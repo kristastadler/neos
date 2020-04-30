@@ -24,6 +24,8 @@ With your partner look through `start.rb` and `near_earth_objects.rb`
 
 - Discuss is this 'good' or 'bad' code? Why?
 
+Bad code -- Files are poorly organized, there are typos, there are hard to understand variable names, overall it is very unreadable
+
 ---
 
 ### Identify the responsibilities (10 min)
@@ -32,9 +34,15 @@ With your Partner, identify the different responsibilities that exist in each fi
 
 - Does this adhere to SRP?
 
+No, not at all.
+
 - How would you utilize encapsulation and abstraction to refactor this code?
 
+start.rb should strictly be a runner file. There shouldn't be so much happening there.
+near_earth_objects.rb is one giant method inside the class. It should be broken out into a def initialize with helper methods.
+
 - What tools/strategies could you utilize to make this code adhere to SRP?
+Make more objects! Use TDD to make sure functionality isn't lost. Encapsulate small chunks of code so they can be reused.
 
 ---
 
